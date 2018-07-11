@@ -33,6 +33,8 @@ end
 
 
 function DB.new(kong_config, strategy)
+  strategy = strategy or kong_config.database
+
   if not kong_config then
     error("missing kong_config", 2)
   end
