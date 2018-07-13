@@ -48,6 +48,8 @@ local function claculate_payload_length(encStr, pos, socket)
 end
 
 function _M.bind_request(socket, username, password)
+  local inspect = require("inspect")
+  print(inspect(username), ":     ", password)
   local encoder = asn1.ASN1Encoder:new()
   local decoder = asn1.ASN1Decoder:new()
 
